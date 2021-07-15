@@ -1,0 +1,1034 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://example.com/Vehicle#vehicle_repository/"
+    xmlns:j.1="http://example.com/Vehicle#transaction_and_payment/"
+    xmlns:j.2="http://example.com/Vehicle#vehicle_registration/"
+    xmlns:j.3="http://example.com/Vehicle#model_details/"
+    xmlns:j.4="http://example.com/Vehicle#vehicle_data/"
+    xmlns:j.5="http://example.com/Vehicle#"
+    xmlns:j.6="http://example.com/Vehicle#range_requirements/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.7="http://example.com/Vehicle#mileage/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://example.com/Vehicle#mileage/">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://example.com/Vehicle#vehicle_repository/"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/Vehicle#county">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://example.com/Vehicle#address"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/Vehicle#transaction_and_payment/">
+    <rdfs:subClassOf rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/Vehicle#zip">
+    <rdfs:subClassOf rdf:resource="http://example.com/Vehicle#address"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/Vehicle#model_details/">
+    <rdfs:subClassOf rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/Vehicle#city">
+    <rdfs:subClassOf rdf:resource="http://example.com/Vehicle#address"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/Vehicle#vehicle_data/">
+    <rdfs:subClassOf rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/Vehicle#vehicle_registration/">
+    <rdfs:subClassOf rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.com/Vehicle#range_requirements/">
+    <rdfs:subClassOf rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://example.com/Vehicle#interprets/">
+    <rdfs:range rdf:resource="http://example.com/Vehicle#mileage/"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/Vehicle#contains/">
+    <rdfs:range rdf:resource="http://example.com/Vehicle#model_details/"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/Vehicle#hasVehicleData/">
+    <rdfs:range rdf:resource="http://example.com/Vehicle#mileage/"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/Vehicle#satisfies/">
+    <rdfs:range rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/Vehicle#fetches/">
+    <rdfs:range rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/Vehicle#comprises/">
+    <rdfs:range rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/Vehicle#determines/">
+    <rdfs:range rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasTransportationFeePaid/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasTransactionYear/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasLegislativeDistrict/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasVehicleLocation/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#meetsElectricRangeRequirement/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#meetsSalePriceRequirement/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasDolVehicleId/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasAddress/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasOdometerReading/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#mileage/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasCafvEligibity/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasMSR/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasMake/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#model_details/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasDolTransactionDate/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasVehicleStatus/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#model_details/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasBaseMsrp/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#paidHybridElectricFee/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasTransactionType/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasCounty/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasRange/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasCity/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasElectricFeePaid/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#meetsSaleDateRequirement/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasModelYear/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#model_details/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasVin/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasType/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasZip/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.com/Vehicle#hasOdometerCode/">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://example.com/Vehicle#mileage/"/>
+  </owl:DatatypeProperty>
+  <rdf:Description rdf:about="http://example.com/Vehicle#June 14 2016">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>152521953</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>June 14 2016</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>Clallam</j.5:hasCounty>
+    <j.5:hasCity>PORT ANGELES</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#November 21 2019">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>161044012</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>November 21 2019</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>KENT</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D137747767">
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#137747767FALSE">
+        <j.5:hasElectricFeePaid>Yes</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#137747767Registration Renewal">
+        <j.5:hasTransportationFeePaid>Yes</j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee>No</j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2020</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets>
+      <rdf:Description rdf:about="http://example.com/Vehicle#Odometer reading is not collected at time of renewal">
+        <j.5:hasOdometerReading>0</j.5:hasOdometerReading>
+        <j.5:hasOdometerCode>Odometer reading is not collected at time of renewal</j.5:hasOdometerCode>
+        <rdf:type rdf:resource="http://example.com/Vehicle#mileage/"/>
+      </rdf:Description>
+    </j.5:interprets>
+    <j.5:contains>
+      <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40DUsed">
+        <j.5:hasVehicleStatus>Used</j.5:hasVehicleStatus>
+        <j.5:hasModelYear>2013</j.5:hasModelYear>
+        <j.5:hasMake>FORD</j.5:hasMake>
+        <rdf:type rdf:resource="http://example.com/Vehicle#model_details/"/>
+      </rdf:Description>
+    </j.5:contains>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#137747767">
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>48</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>137747767</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#January 29 2020">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>228363551</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>January 29 2020</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>CLYDE HILL</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#January 24 2014">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>236336761</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>January 24 2014</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>Lewis</j.5:hasCounty>
+    <j.5:hasCity>NAPAVINE</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#July 27 2020">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>137747767</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>July 27 2020</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>BELLEVUE</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#March 07 2015">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>217859575</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>March 07 2015</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>SAMMAMISH</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D105112052">
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#105112052FALSE">
+        <j.5:hasElectricFeePaid>Yes</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#105112052Registration Renewal">
+        <j.5:hasTransportationFeePaid>Yes</j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee>No</j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2020</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Odometer reading is not collected at time of renewal"/>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DUsed"/>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#105112052">
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>46</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>105112052</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D152521953">
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#152521953">
+        <j.5:hasTransactionType>Transfer Title</j.5:hasTransactionType>
+        <j.5:hasTransactionType>Registration at time of Transfer</j.5:hasTransactionType>
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>24</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#152521953Registration at time of Transfer">
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2016</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration at time of Transfer</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#152521953Transfer Title">
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2016</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Transfer Title</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DUsed"/>
+    <j.5:hasDolVehicleId>152521953</j.5:hasDolVehicleId>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#152521953Registration Renewal">
+        <j.5:hasTransportationFeePaid>Yes</j.5:hasTransportationFeePaid>
+        <j.5:hasTransactionYear>2020</j.5:hasTransactionYear>
+        <j.5:hasTransportationFeePaid>No</j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee>No</j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2018</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#152521953FALSE">
+        <j.5:hasElectricFeePaid>Yes</j.5:hasElectricFeePaid>
+        <j.5:hasElectricFeePaid>Not Applicable</j.5:hasElectricFeePaid>
+        <j.5:hasElectricFeePaid>No</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+    <j.5:interprets>
+      <rdf:Description rdf:about="http://example.com/Vehicle#Actual Mileage">
+        <j.5:hasOdometerReading>28</j.5:hasOdometerReading>
+        <j.5:hasOdometerReading>14501</j.5:hasOdometerReading>
+        <j.5:hasOdometerReading>19</j.5:hasOdometerReading>
+        <j.5:hasOdometerReading>32019</j.5:hasOdometerReading>
+        <j.5:hasOdometerReading>25533</j.5:hasOdometerReading>
+        <j.5:hasOdometerReading>1895</j.5:hasOdometerReading>
+        <j.5:hasOdometerCode>Actual Mileage</j.5:hasOdometerCode>
+        <j.5:hasOdometerReading>24</j.5:hasOdometerReading>
+        <rdf:type rdf:resource="http://example.com/Vehicle#mileage/"/>
+        <j.5:hasOdometerReading>434</j.5:hasOdometerReading>
+        <j.5:hasOdometerReading>489</j.5:hasOdometerReading>
+      </rdf:Description>
+    </j.5:interprets>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Odometer reading is not collected at time of renewal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D217859575">
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#217859575FALSE">
+        <j.5:hasElectricFeePaid>No</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#217859575Registration Renewal">
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2015</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Actual Mileage"/>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DUsed"/>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#217859575">
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>41</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>217859575</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#September 07 2018">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>109328768</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>September 07 2018</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>KIRKLAND</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#February 25 2017">
+    <j.5:hasCity>MEDINA</j.5:hasCity>
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>228363551</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>February 25 2017</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>CLYDE HILL</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D182866582">
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#182866582Original Title">
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2013</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Original Title</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#182866582FALSE">
+        <j.5:hasElectricFeePaid>Not Applicable</j.5:hasElectricFeePaid>
+        <j.5:hasElectricFeePaid>No</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#182866582Original Registration">
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2013</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Original Registration</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Actual Mileage"/>
+    <j.5:contains>
+      <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40DNew">
+        <j.5:hasVehicleStatus>New</j.5:hasVehicleStatus>
+        <j.5:hasModelYear>2013</j.5:hasModelYear>
+        <j.5:hasMake>FORD</j.5:hasMake>
+        <rdf:type rdf:resource="http://example.com/Vehicle#model_details/"/>
+      </rdf:Description>
+    </j.5:contains>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#182866582">
+        <j.5:hasTransactionType>Original Title</j.5:hasTransactionType>
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Original Registration</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>5</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>182866582</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D109328768">
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#109328768FALSE">
+        <j.5:hasElectricFeePaid>No</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#109328768Registration Renewal">
+        <j.5:hasTransactionYear>2018</j.5:hasTransactionYear>
+        <j.5:hasTransportationFeePaid>No</j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee>No</j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2019</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Odometer reading is not collected at time of renewal"/>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DUsed"/>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#109328768">
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>45</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>109328768</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#August 30 2016">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>164564977</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>August 30 2016</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>Benton</j.5:hasCounty>
+    <j.5:hasCity>RICHLAND</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D107879320">
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#107879320FALSE">
+        <j.5:hasElectricFeePaid>Yes</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#107879320Registration Renewal">
+        <j.5:hasTransactionYear>2014</j.5:hasTransactionYear>
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2015</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets>
+      <rdf:Description rdf:about="http://example.com/Vehicle#No Odometer Code on File">
+        <j.5:hasOdometerReading>0</j.5:hasOdometerReading>
+        <j.5:hasOdometerCode>No Odometer Code on File</j.5:hasOdometerCode>
+        <rdf:type rdf:resource="http://example.com/Vehicle#mileage/"/>
+      </rdf:Description>
+    </j.5:interprets>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DUsed"/>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#107879320">
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>37</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>107879320</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#June 17 2014">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>241408107</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>June 17 2014</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>Whatcom</j.5:hasCounty>
+    <j.5:hasCity>EVERSON</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#July 18 2014">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>107879320</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>July 18 2014</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>SEATTLE</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D164564977">
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#164564977FALSE">
+        <j.5:hasElectricFeePaid>Yes</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#164564977Registration Renewal">
+        <j.5:hasTransactionYear>2015</j.5:hasTransactionYear>
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2016</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Actual Mileage"/>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DUsed"/>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#164564977">
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>8</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>164564977</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#January 24 2018">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>168690217</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>January 24 2018</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>SEATTLE</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D228363551">
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#228363551">
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasLegislativeDistrict>23</j.5:hasLegislativeDistrict>
+        <j.5:hasTransactionType>Registration at time of Transfer</j.5:hasTransactionType>
+        <j.5:hasLegislativeDistrict>48</j.5:hasLegislativeDistrict>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+        <j.5:hasTransactionType>Transfer Title</j.5:hasTransactionType>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>228363551</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#228363551Transfer Title">
+        <j.5:hasTransportationFeePaid>Not Applicable</j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee>Not Applicable</j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2017</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Transfer Title</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#228363551Registration Renewal">
+        <j.5:hasTransportationFeePaid>Yes</j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee>No</j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2020</j.5:hasTransactionYear>
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2015</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Odometer reading is not collected at time of renewal"/>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Actual Mileage"/>
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#228363551FALSE">
+        <j.5:hasElectricFeePaid>Not Applicable</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>TRUE</j.5:meetsSalePriceRequirement>
+        <j.5:hasElectricFeePaid>Yes</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#228363551Registration at time of Transfer">
+        <j.5:hasTransportationFeePaid>No</j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee>No</j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2017</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration at time of Transfer</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#No Odometer Code on File"/>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DUsed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#August 03 2020">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>152521953</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>August 03 2020</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>Clallam</j.5:hasCounty>
+    <j.5:hasCity>SEQUIM</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#February 25 2020">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>105112052</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>February 25 2020</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>SEATTLE</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#July 06 2015">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>228363551</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>July 06 2015</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>Kitsap</j.5:hasCounty>
+    <j.5:hasCity>KINGSTON</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#July 10 2015">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>241408107</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>July 10 2015</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>Whatcom</j.5:hasCounty>
+    <j.5:hasCity>EVERSON</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#April 24 2018">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>152521953</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>April 24 2018</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>Clallam</j.5:hasCounty>
+    <j.5:hasCity>PORT ANGELES</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D241408107">
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#241408107Registration at time of Transfer">
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2016</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration at time of Transfer</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#241408107FALSE">
+        <j.5:hasElectricFeePaid>Yes</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#241408107Registration Renewal">
+        <j.5:hasTransactionYear>2014</j.5:hasTransactionYear>
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2015</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Actual Mileage"/>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DUsed"/>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#241408107">
+        <j.5:hasTransactionType>Registration at time of Transfer</j.5:hasTransactionType>
+        <j.5:hasLegislativeDistrict>6</j.5:hasLegislativeDistrict>
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>42</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>241408107</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#April 09 2013">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>182866582</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>April 09 2013</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>ISSAQUAH</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#October 24 2016">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>241408107</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>October 24 2016</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>Spokane</j.5:hasCounty>
+    <j.5:hasCity>SPOKANE</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#January 07 2015">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>164564977</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>January 07 2015</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>Benton</j.5:hasCounty>
+    <j.5:hasCity>RICHLAND</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#September 24 2013">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>118196053</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>September 24 2013</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>SEATTLE</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D236336761">
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#236336761Original Title">
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2014</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Original Title</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#236336761FALSE">
+        <j.5:hasElectricFeePaid>Not Applicable</j.5:hasElectricFeePaid>
+        <j.5:hasElectricFeePaid>No</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#236336761Original Registration">
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2014</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Original Registration</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Actual Mileage"/>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DNew"/>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#236336761">
+        <j.5:hasTransactionType>Original Title</j.5:hasTransactionType>
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Original Registration</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>20</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>236336761</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D168690217">
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#168690217FALSE">
+        <j.5:hasElectricFeePaid>Yes</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#168690217Registration Renewal">
+        <j.5:hasTransportationFeePaid>No</j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee>No</j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2018</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Odometer reading is not collected at time of renewal"/>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DUsed"/>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#168690217">
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>34</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>168690217</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#September 03 2019">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>109328768</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>September 03 2019</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>KIRKLAND</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D118196053">
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#118196053Original Title">
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2013</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Original Title</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#118196053FALSE">
+        <j.5:hasElectricFeePaid>Not Applicable</j.5:hasElectricFeePaid>
+        <j.5:hasElectricFeePaid>No</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#118196053Original Registration">
+        <j.5:hasTransportationFeePaid></j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee></j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2013</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Original Registration</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Actual Mileage"/>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DNew"/>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#118196053">
+        <j.5:hasTransactionType>Original Title</j.5:hasTransactionType>
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Original Registration</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>46</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>118196053</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#July 14 2015">
+    <j.5:hasVin>1FADP3R40D</j.5:hasVin>
+    <j.5:hasDolVehicleId>107879320</j.5:hasDolVehicleId>
+    <j.5:hasDolTransactionDate>July 14 2015</j.5:hasDolTransactionDate>
+    <j.5:hasZip>Zip</j.5:hasZip>
+    <j.5:hasCounty>King</j.5:hasCounty>
+    <j.5:hasCity>SEATTLE</j.5:hasCity>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/Vehicle#1FADP3R40D161044012">
+    <j.5:satisfies>
+      <rdf:Description rdf:about="http://example.com/Vehicle#161044012FALSE">
+        <j.5:hasElectricFeePaid>Yes</j.5:hasElectricFeePaid>
+        <j.5:meetsSalePriceRequirement>FALSE</j.5:meetsSalePriceRequirement>
+        <j.5:meetsSaleDateRequirement>FALSE</j.5:meetsSaleDateRequirement>
+        <j.5:meetsElectricRangeRequirement>TRUE</j.5:meetsElectricRangeRequirement>
+        <rdf:type rdf:resource="http://example.com/Vehicle#range_requirements/"/>
+      </rdf:Description>
+    </j.5:satisfies>
+    <j.5:fetches>
+      <rdf:Description rdf:about="http://example.com/Vehicle#161044012Registration Renewal">
+        <j.5:hasTransportationFeePaid>Yes</j.5:hasTransportationFeePaid>
+        <j.5:hasPaidHybridElectricFee>No</j.5:hasPaidHybridElectricFee>
+        <j.5:hasTransactionYear>2019</j.5:hasTransactionYear>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <rdf:type rdf:resource="http://example.com/Vehicle#transaction_and_payment/"/>
+      </rdf:Description>
+    </j.5:fetches>
+    <j.5:interprets rdf:resource="http://example.com/Vehicle#Odometer reading is not collected at time of renewal"/>
+    <j.5:contains rdf:resource="http://example.com/Vehicle#1FADP3R40DUsed"/>
+    <j.5:comprises rdf:resource="http://example.com/Vehicle#vehicle_registration/"/>
+    <j.5:determines>
+      <rdf:Description rdf:about="http://example.com/Vehicle#161044012">
+        <j.5:hasVehicleLocation>VIN</j.5:hasVehicleLocation>
+        <j.5:hasTransactionType>Registration Renewal</j.5:hasTransactionType>
+        <j.5:hasRange>76</j.5:hasRange>
+        <j.5:hasCafvEligibity>VIN</j.5:hasCafvEligibity>
+        <j.5:hasLegislativeDistrict>33</j.5:hasLegislativeDistrict>
+        <j.5:hasBaseMsrp>39200</j.5:hasBaseMsrp>
+        <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_data/"/>
+      </rdf:Description>
+    </j.5:determines>
+    <j.5:hasDolVehicleId>161044012</j.5:hasDolVehicleId>
+    <rdf:type rdf:resource="http://example.com/Vehicle#vehicle_repository/"/>
+  </rdf:Description>
+</rdf:RDF>
